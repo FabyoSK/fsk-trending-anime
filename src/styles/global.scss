@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #f05454;
+  --primary-dark: #222831;
+  --secondary-dark: #30475e;
+
+  --color-text: #dddddd;
+}
+body {
+  font: 16px "Poppins", Arial, sans-serif;
+  color: #121214;
+}
+input {
+  font-family: "Poppins";
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem;
+}
+button {
+  cursor: pointer;
+}
