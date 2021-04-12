@@ -1,10 +1,37 @@
-.anime-card {
-  display: flex;
-  flex-direction: column;
-  background-color: bisque;
-  align-items: center;
-  justify-content: center;
-}
-.anime-card-img {
-  width: 250px;
+.anime-card-section {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  grid-auto-rows: auto;
+
+  grid-gap: 1rem;
+
+  .anime-card {
+    background-color: rgb(231, 231, 231);
+    width: 250px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+
+    margin: 32px;
+
+    &:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .anime-card-img {
+      width: 100%;
+      padding-bottom: 32px;
+    }
+    .anime-card-info {
+      padding: 16px;
+    }
+    .anime-card-button {
+      background-color: rgb(224, 224, 224);
+      margin-top: 12px;
+      border: 1px solid;
+      padding: 10px 90px;
+    }
+  }
 }
