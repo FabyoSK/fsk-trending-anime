@@ -1,24 +1,30 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
-import { AnimeCardItem } from "../components/AnimeCardItem";
 import api from "../services/api";
 
-import "../styles/animecard.scss";
+import "../styles/animeInfo.scss";
+
 interface AnimeInfo {
   id: number;
   attributes: {
+    canonicalTitle: string;
+    coverImage: {
+      original: string;
+    };
     posterImage: {
       large: string;
     };
-    canonicalTitle: string;
     description: string;
   };
 }
 export function AnimeInfo() {
   const [animeInfo, setAnimeInfo] = useState<AnimeInfo>();
 
+  const { id }: { id: string } = useParams();
+
   useEffect(() => {
-    api.get("anime/41370").then((response) => {
+    api.get(`anime/${id}`).then((response) => {
       setAnimeInfo(response.data.data);
       console.log(response.data.data);
     });
@@ -26,8 +32,12 @@ export function AnimeInfo() {
 
   return (
     <div>
-      <img src="" alt="" />
-      <img src={animeInfo?.attributes.posterImage.large} alt="" />
+      <div className="hero">
+        <img src={animeInfo?.attributes.coverImage.original} />
+      </div>
+      <div className="anime-photo-section">
+        <img src={animeInfo?.attributes.posterImage.large} alt="" />
+      </div>
       <p>{animeInfo?.attributes.description}</p>
     </div>
   );

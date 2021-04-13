@@ -7,7 +7,7 @@ function Routes() {
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={Landing} />
-        <Route path="/anime" exact component={AnimeInfo} />
+        <Route path="/anime/:id" component={AnimeInfo} />
       </Switch>
     </BrowserRouter>
   );

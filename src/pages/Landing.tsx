@@ -27,7 +27,7 @@ export function Landing() {
   return (
     <div className="anime-card-section">
       {aniTrend.map((anime) => {
-        return <AnimeCardItem anime={anime} />;
+        return <AnimeCardItem key={anime.id} anime={anime} />;
       })}
     </div>
   );
