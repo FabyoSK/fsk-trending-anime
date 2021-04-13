@@ -14,7 +14,9 @@ interface AnimeItemProps {
 export function AnimeCardItem(props: AnimeItemProps) {
   return (
     <div key={props.anime.id} className="anime-card">
-      <a href={`/anime/${props.anime.id}`} className="anime-card-link"></a>
+      <a href={`/anime/${props.anime.id}`} className="anime-card-link">
+        {" "}
+      </a>
       <img
         src={props.anime.attributes.posterImage.large}
         alt=""

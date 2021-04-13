@@ -1,0 +1,29 @@
+header.header {
+  background: #ed9200;
+  padding: 2rem 0;
+
+  > div {
+    max-width: 1120px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  h1 {
+    color: var(--shapes);
+  }
+
+  nav {
+    ul {
+      text-align: center;
+      li {
+        display: inline-block;
+        padding: 12px;
+
+        &:hover {
+        }
+      }
+    }
+  }
+}
