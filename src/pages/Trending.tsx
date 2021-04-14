@@ -28,10 +28,13 @@ export function TrendingAnimes() {
   return (
     <>
       <Header />
-      <div className="anime-card-section">
-        {aniTrend.map((anime) => {
-          return <AnimeCardItem key={anime.id} anime={anime} />;
-        })}
+      <div className="container">
+        <h1>Top Anime Series</h1>
+        <div className="anime-card-section">
+          {aniTrend.map((anime) => {
+            return <AnimeCardItem key={anime.id} anime={anime} />;
+          })}
+        </div>
       </div>
     </>
   );

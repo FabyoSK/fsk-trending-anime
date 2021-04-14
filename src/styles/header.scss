@@ -1,5 +1,5 @@
 header.header {
-  background: #ed9200;
+  background: var(--secondary-dark);
   padding: 2rem 0;
 
   > div {
@@ -11,7 +11,7 @@ header.header {
     justify-content: space-around;
   }
   h1 {
-    color: var(--shapes);
+    color: var(--color-text);
   }
 
   nav {
@@ -20,10 +20,36 @@ header.header {
       li {
         display: inline-block;
         padding: 12px;
-
         &:hover {
         }
+        a {
+          color: var(--color-text);
+        }
       }
+    }
+  }
+  .search-bar {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+    font-size: 16px;
+
+    input {
+      padding: 12px 24px;
+      border: 0;
+      border-radius: 8px;
+    }
+
+    button {
+      padding: 14px;
+      border: 0;
+      background-color: #3fad27;
+      border-radius: 8px;
+      color: #fff;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-left: 10px;
     }
   }
 }
