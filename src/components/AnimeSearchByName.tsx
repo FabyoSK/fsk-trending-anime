@@ -1,20 +1,21 @@
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 
 import api from "../services/api";
-import traceMoeApi from "../services/Trace.moe.api";
+// import traceMoeApi from "../services/Trace.moe.api";
 
 import AnimeCardItem from "./AnimeCardItem";
 import "../styles/animecard.scss";
 import "../styles/search.scss";
-interface AnimeInfo {
-  title_english: string;
-  episode: number;
-  from: number;
-  to: number;
-  similarity: number;
-  title_romaji: string;
-}
+
+// interface AnimeInfo {
+//   title_english: string;
+//   episode: number;
+//   from: number;
+//   to: number;
+//   similarity: number;
+//   title_romaji: string;
+// }
 interface AnimeCardProps {
   id: number;
   attributes: {
@@ -27,9 +28,9 @@ interface AnimeCardProps {
 }
 
 export function AnimeSearchByName() {
-  const [file, setFile] = useState();
+  // const [file, setFile] = useState();
   const [querie, setQuerie] = useState("");
-  const [animeInfo, setAnimeInfo] = useState<AnimeInfo>();
+  // const [animeInfo, setAnimeInfo] = useState<AnimeInfo>();
   const [animeSearched, setAnimesearched] = useState<AnimeCardProps[]>([]);
 
   const [hasResult, setHasResult] = useState(false);

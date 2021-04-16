@@ -1,4 +1,4 @@
-import { AnimeSearchByImage } from "../components/AnimeSearchByImage";
+// import { AnimeSearchByImage } from "../components/AnimeSearchByImage";
 import { AnimeSearchByName } from "../components/AnimeSearchByName";
 import { Header } from "../components/Header";
 

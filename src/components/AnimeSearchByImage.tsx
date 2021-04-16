@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 import api from "../services/api";
 import traceMoeApi from "../services/Trace.moe.api";
 import AnimeCardItem from "./AnimeCardItem";
@@ -23,7 +23,7 @@ interface AnimeCardProps {
 }
 
 export function AnimeSearchByImage() {
-  const [file, setFile] = useState();
+  // const [file, setFile] = useState();
   const [imageUrl, setImageUrl] = useState("");
   const [animeInfo, setAnimeInfo] = useState<AnimeInfo>();
   const [animeSearched, setAnimesearched] = useState<AnimeCardProps[]>([]);
