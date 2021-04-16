@@ -20,10 +20,15 @@ header.header {
       li {
         display: inline-block;
         padding: 12px;
-        &:hover {
-        }
+
         a {
           color: var(--color-text);
+          padding-bottom: 5px;
+
+          transition: 0.1s;
+          &:hover {
+            border-bottom: 2px solid var(--color-text);
+          }
         }
       }
     }
