@@ -33,7 +33,7 @@ export function AnimeInfo() {
   return (
     <div>
       <div className="hero">
-        <img src={animeInfo?.attributes.coverImage.original} alt="" />
+        <img src={animeInfo?.attributes.coverImage?.original} alt="" />
       </div>
       <div className="anime-photo-section">
         <img src={animeInfo?.attributes.posterImage.large} alt="" />

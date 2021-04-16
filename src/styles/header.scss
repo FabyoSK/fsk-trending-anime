@@ -3,12 +3,12 @@ header.header {
   padding: 2rem 0;
 
   > div {
-    max-width: 1120px;
     margin: 0 auto;
+    max-width: 1100px;
 
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   h1 {
     color: var(--color-text);
@@ -31,30 +31,6 @@ header.header {
           }
         }
       }
-    }
-  }
-  .search-bar {
-    display: flex;
-    gap: 0.25rem;
-    align-items: center;
-    font-size: 16px;
-
-    input {
-      padding: 12px 24px;
-      border: 0;
-      border-radius: 8px;
-    }
-
-    button {
-      padding: 14px;
-      border: 0;
-      background-color: #3fad27;
-      border-radius: 8px;
-      color: #fff;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      margin-left: 10px;
     }
   }
 }

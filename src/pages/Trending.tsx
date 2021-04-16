@@ -19,10 +19,16 @@ export function TrendingAnimes() {
   const [aniTrend, setAniTrend] = useState<AnimeInfo[]>([]);
 
   useEffect(() => {
-    api.get("trending/anime").then((response) => {
-      setAniTrend(response.data.data);
-      console.log(response.data.data[0]);
-    });
+    api
+      .get("trending/anime", {
+        params: {
+          "page[limit]": "12",
+        },
+      })
+      .then((response) => {
+        setAniTrend(response.data.data);
+        console.log(response.data.data);
+      });
   }, []);
 
   return (
